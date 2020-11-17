@@ -28,3 +28,21 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: handoff request 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: handoff_request
+  - action: utter_confirm_handoff
+  - intent: affirm
+  - action: utter_handoff
+
+- story: handoff request false
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: handoff_request
+  - action: utter_confirm_handoff
+  - intent: deny
+  - action: utter_happy

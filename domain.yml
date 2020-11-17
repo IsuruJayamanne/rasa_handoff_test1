@@ -8,6 +8,8 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - handoff_request
+  #- handoff
 
 responses:
   utter_greet:
@@ -28,6 +30,20 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_confirm_handoff:
+  - text: "Shall I handoff to a human?"
+    buttons:
+    - title: "OK"
+      payload: "/affirm"
+    - title: "No"
+      payload: "/deny"
+
+  utter_handoff:
+  # - text: "Transfered to an agent"
+  - custom:
+      handoff_host: "http://localhost:5006"
+  
 
 session_config:
   session_expiration_time: 60

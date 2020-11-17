@@ -39,6 +39,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok
 
 - intent: deny
   examples: |
@@ -90,3 +91,11 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: handoff_request
+  examples: |
+    - I want to talk to a human
+    - Can I speak with an agent
+    - Transfer me to an agent
+    - Put a human on line
+    - Handoff to a human
