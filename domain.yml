@@ -9,7 +9,22 @@ intents:
   - mood_unhappy
   - bot_challenge
   - handoff_request
+  - ask_service
+  - town_entry
   #- handoff
+
+entities:
+  - service
+  - town
+
+slots:
+  service:
+    type: text
+  town:
+    type: text
+
+forms:
+  ask_town_form:
 
 responses:
   utter_greet:
@@ -39,12 +54,21 @@ responses:
     - title: "No"
       payload: "/deny"
 
+  utter_ask_town:
+  - text: "What is your current home city?"
+
+  utter_notify_handoff:
+  - text: "Wait! you'll be directed to an agent"
+
   utter_handoff:
   # - text: "Transfered to an agent"
   - custom:
-      handoff_host: "http://localhost:5006"
+      handoff_host: "http://localhost"
+      service: "{service}"
+      town: "{town}"
   
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+

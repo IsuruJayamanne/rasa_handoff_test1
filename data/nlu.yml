@@ -40,6 +40,8 @@ nlu:
     - that sounds good
     - correct
     - ok
+    - please
+    - thanks
 
 - intent: deny
   examples: |
@@ -51,47 +53,6 @@ nlu:
     - no way
     - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
 - intent: handoff_request
   examples: |
     - I want to talk to a human
@@ -99,3 +60,27 @@ nlu:
     - Transfer me to an agent
     - Put a human on line
     - Handoff to a human
+
+- intent: ask_service
+  examples: |
+    - Can I open an [account](service)
+    - I need to open an [account](service)
+    - How to open a [savings account](service)
+    - I like to get a [credit card](service)
+    - I am expecting to [deposit a cheque](service)
+    - I need a [debit card](service)
+    - How to register for [online banking](service)
+    - How to [reload my phone](service)
+
+- intent: town_entry
+  examples: |
+    - I am from [kurunegala](town)
+    - Im near [kurunegala](town)
+    - I live in [kurunegala](town)
+    - nearest city to me is [kurunegala](town)
+    - my hometown is [kurunegala](town)
+    - Im from [colombo](town)
+    - I am near [galle](town)
+    - I live in [kandy](town)
+    - Im based on [negombo](town)
+    - [kurunegala](town) is where i live
